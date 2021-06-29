@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/head"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SCAN YOUR MEDICINE"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Don't know about the medicines you use? Want to know everything about it? Don't worry!! Just scan the QRcode/Barcode behind the medicine and know everything you want to know about."
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="98dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/barcode"
+        app:layout_constraintBottom_toTopOf="@+id/layoutend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutend"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/head2"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/scanbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/but"
+            android:text="GO FOR SCAN"
+            app:backgroundTint="@color/but"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutend"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
